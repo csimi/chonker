@@ -1,0 +1,36 @@
+{
+  "name": "chonker",
+  "version": "1.0.0",
+  "description": "Creates chonks from your chunks",
+  "main": "lib/index.js",
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "cross-env NODE_ENV=test nyc mocha",
+    "posttest": "npm run coverage",
+    "coverage": "nyc report --reporter=lcov",
+    "lint": "eslint -v && eslint ."
+  },
+  "author": "David Csirmaz",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:csimi/chonker.git"
+  },
+  "devDependencies": {
+    "@csimi/eslint-config": "^3.0.0",
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.0",
+    "eslint": "^7.32.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.0.0",
+    "sinon": "^8.1.1",
+    "sinon-chai": "^3.4.0",
+    "source-map-support": "^0.5.19"
+  },
+  "files": [
+    "lib/**"
+  ],
+  "keywords": [
+    "chunk"
+  ]
+}
